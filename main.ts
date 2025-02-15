@@ -1,16 +1,15 @@
-let waarde_van_het_kompas = 0
+let graden = 0
 basic.forever(function () {
-    if (waarde_van_het_kompas == 0) {
-    	
-    }
-})
-basic.forever(function () {
-    if (waarde_van_het_kompas < 136) {
+    graden = input.compassHeading()
+    if (graden < 45) {
+        basic.showArrow(ArrowNames.North)
+    } else if (graden < 135) {
         basic.showArrow(ArrowNames.East)
-    }
-})
-basic.forever(function () {
-    if (waarde_van_het_kompas < 226) {
+    } else if (graden < 225) {
         basic.showArrow(ArrowNames.South)
+    } else if (graden < 315) {
+        basic.showArrow(ArrowNames.West)
+    } else {
+        basic.showArrow(ArrowNames.North)
     }
 })
