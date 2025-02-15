@@ -9,7 +9,7 @@ basic.forever(function () {
         basic.showArrow(ArrowNames.South)
     } else if (graden < 315) {
         basic.showArrow(ArrowNames.West)
-    } else {
+    } else if (315 < graden) {
         basic.showArrow(ArrowNames.North)
     }
 })
