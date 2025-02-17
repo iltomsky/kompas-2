@@ -4,11 +4,29 @@ basic.forever(function () {
     if (graden < 45) {
         basic.showArrow(ArrowNames.North)
     } else if (graden < 135) {
-        basic.showArrow(ArrowNames.East)
+        basic.showLeds(`
+            . . # . .
+            . # . . .
+            # # # # #
+            . # . . .
+            . . # . .
+            `)
     } else if (graden < 225) {
-        basic.showArrow(ArrowNames.South)
+        basic.showLeds(`
+            . . # . .
+            . . # . .
+            # . # . #
+            . # # # .
+            . . # . .
+            `)
     } else if (graden < 315) {
-        basic.showArrow(ArrowNames.West)
+        basic.showLeds(`
+            . . # . .
+            . . . # .
+            # # # # #
+            . . . # .
+            . . # . .
+            `)
     } else if (315 < graden) {
         basic.showArrow(ArrowNames.North)
     }
